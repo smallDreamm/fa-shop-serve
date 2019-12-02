@@ -18,12 +18,14 @@ let user = require('./controller/user.js');
 let product = require('./controller/product.js');
 let type = require('./controller/type.js');
 let cart = require('./controller/cart.js');
+let search = require('./controller/search.js');
 
 let router = new Router();
 router.use('/user', user.routes()); //user和前端config.js的registUser里的user对应
 router.use('/product', product.routes());
 router.use('/type', type.routes());
 router.use('/cart', cart.routes());
+router.use('/search', search.routes());
 
 app.use(router.routes());
 app.use(router.allowedMethods());
